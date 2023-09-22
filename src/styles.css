@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'shabnam';
+    src: url('assets/font/Shabnam.ttf')  format('truetype'), /* Safari, Android, iOS */
+         
+}
+
+html , body {
+    font-family: 'shabnam';
+}
