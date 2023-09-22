@@ -13,6 +13,10 @@ import { SidbarComponent } from './sidbar/sidbar.component';
   imports: [
     CommonModule
   ],
+  exports:[
+    HeaderComponent,
+    SidbarComponent
+  ]
   
 })
 export class ShareModule { }
