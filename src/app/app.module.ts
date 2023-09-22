@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ShareModule } from './share/share.module';
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ShareModule } from './share/share.module';
   ],
   imports: [
     BrowserModule,
-    ShareModule
+    ShareModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
