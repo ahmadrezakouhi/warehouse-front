@@ -14,9 +14,13 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: '/login', component: LoginComponent },
-      { path: '/user/create', component: UserRegisterComponent }
+      { path: 'login', component: LoginComponent },
+      { path: 'user/create', component: UserRegisterComponent }
     ])
+  ],
+  exports:[
+    RouterModule,
+    LoginComponent
   ]
 })
 export class UserModule { }
