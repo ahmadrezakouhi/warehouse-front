@@ -4,17 +4,22 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ShareModule } from './share/share.module';
 import { UserModule } from './user/user.module';
-import { LoginComponent } from './user/login/login.component';
+import { WarehouseModule } from './warehouse/warehouse.module';
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
     ShareModule,
     UserModule,
+    WarehouseModule,
     RouterModule.forRoot([
       { path: '**', redirectTo:'login' }
     ])
