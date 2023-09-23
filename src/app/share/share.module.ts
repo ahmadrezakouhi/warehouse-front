@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { SidbarComponent } from './sidbar/sidbar.component';
-
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { SidbarComponent } from './sidbar/sidbar.component';
     SidbarComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:[
     HeaderComponent,
