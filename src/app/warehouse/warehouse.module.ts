@@ -19,6 +19,7 @@ import { WarehouseCreateComponent } from './warehouse-create/warehouse-create.co
       { path: 'warehouses/create', component: WarehouseCreateComponent }
 
     ])
-  ]
+  ],
+  exports : [RouterModule]
 })
 export class WarehouseModule { }
