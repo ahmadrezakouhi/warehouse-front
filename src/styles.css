@@ -13,14 +13,5 @@
 
 html , body{
     background-color: #fbfbfb;
-}
-
-
-.table-card{
-    min-width: 75%;
-}
-
-
-.bg-red{
-    background-color:coral;
+    height: 100vh;
 }
