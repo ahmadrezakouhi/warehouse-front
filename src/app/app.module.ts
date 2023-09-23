@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ShareModule } from './share/share.module';
 import { UserModule } from './user/user.module';
 import { WarehouseModule } from './warehouse/warehouse.module';
+import { GoodsModule } from './goods/goods.module';
 
 
 
@@ -20,6 +21,7 @@ import { WarehouseModule } from './warehouse/warehouse.module';
     ShareModule,
     UserModule,
     WarehouseModule,
+    GoodsModule,
     RouterModule.forRoot([
       { path: '**', redirectTo:'login' }
     ])
