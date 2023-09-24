@@ -11,9 +11,11 @@ import { GoodsModule } from './goods/goods.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+
 
   ],
   imports: [

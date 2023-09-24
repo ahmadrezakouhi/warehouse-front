@@ -8,8 +8,8 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    GoodsListComponent,
-    GoodsCreateComponent
+    GoodsCreateComponent,
+    GoodsListComponent
   ],
   imports: [
     CommonModule,
