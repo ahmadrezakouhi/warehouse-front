@@ -6,8 +6,7 @@ import { ShareModule } from './share/share.module';
 import { UserModule } from './user/user.module';
 import { WarehouseModule } from './warehouse/warehouse.module';
 import { GoodsModule } from './goods/goods.module';
-
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -20,6 +19,7 @@ import { GoodsModule } from './goods/goods.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ShareModule,
     UserModule,
     WarehouseModule,

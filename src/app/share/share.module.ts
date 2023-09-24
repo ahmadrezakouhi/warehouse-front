@@ -5,10 +5,12 @@ import { SidbarComponent } from './sidbar/sidbar.component';
 import {RouterModule} from '@angular/router';
 
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
     SidbarComponent,
+
   ],
   imports: [
     CommonModule,
