@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ReceiptService } from '../receipt.service';
 import { Location } from '@angular/common';
 import { GoodsService } from 'src/app/goods/goods.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-receipt-create',
   templateUrl: './receipt-create.component.html',
@@ -18,7 +19,9 @@ export class ReceiptCreateComponent {
 
   constructor(private receiptService: ReceiptService ,
      private goodsService:GoodsService,
-     private location:Location) {
+     private location:Location,
+     private notification:ToastrService
+     ) {
 
   }
 
@@ -48,6 +51,7 @@ export class ReceiptCreateComponent {
     let index = this.items.findIndex((item)=>item.itemCode == itemCode);
     console.log(itemCode)
     this.items.splice(index,1);
+    this.notification.success('حذف شد');
   }
 
   back(): void {

@@ -8,11 +8,11 @@
                     <h4> گروه کالا</h4>  
                     <div class="d-flex ">
                      <div class="me-0 ">
-                         <input type="text" class="form-control rounded-0 rounded-start" [(ngModel)]="name"
+                         <input type="text" class="form-control rounded-0 rounded-start" [(ngModel)]="group.name"
                           name="inputName" id="inputName" placeholder="گروه کالا">
                      </div>
                      <div class="ms-0">
-                         <button type="submit" class="btn text-white rounded-0 rounded-end"  style="background-color: dodgerblue;">
+                         <button type="button" (click)="createGroup()" class="btn text-white rounded-0 rounded-end"  style="background-color: dodgerblue;">
                              <span class="fa fa-plus"></span>
                          </button>
                      </div>

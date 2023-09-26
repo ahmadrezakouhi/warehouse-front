@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IUnit } from './unit';
+import { IUnit, Unit } from './unit';
 import { AppSettings } from '../share/app-settings';
 
 @Injectable({
@@ -13,5 +13,9 @@ export class UnitService {
 
   getAllUnits():Observable<IUnit[]>{
     return this.http.get<IUnit[]>(AppSettings.ENDPOINT+'units');
+  }
+
+  createUnit(unit:Unit):Observable<void>{
+    return this.http.post<void>(AppSettings.ENDPOINT+"units",unit);
   }
 }

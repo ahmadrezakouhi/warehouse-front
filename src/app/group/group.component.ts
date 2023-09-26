@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IGroup } from './group';
+import { Group, IGroup } from './group';
 import { GroupService } from './group.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-group',
@@ -9,14 +10,30 @@ import { GroupService } from './group.service';
 })
 export class GroupComponent implements OnInit{
   groups:IGroup[]=[];
-  name:string = '';
-  constructor(private groupService:GroupService){
+  group:Group = new Group();
+  constructor(private groupService:GroupService ,
+    private notification:ToastrService
+    ){
 
   }
   ngOnInit(): void {
-    this.groupService.getAllUnits().subscribe({
+    this.getGroups();
+  }
+
+  getGroups(){
+    this.groupService.getAllGroups().subscribe({
       next: groups => this.groups = groups
     }
     )
+  }
+
+  createGroup(){
+    this.groupService.createGroup(this.group).subscribe({
+      next: ()=>{
+        this.getGroups();
+        this.notification.success('گروه کالا ایجاد شد');
+      }
+
+    })
   }
 }

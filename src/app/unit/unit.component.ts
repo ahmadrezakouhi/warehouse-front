@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IUnit } from './unit';
+import { IUnit, Unit } from './unit';
 import { UnitService } from './unit.service';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-unit',
   templateUrl: './unit.component.html',
@@ -9,14 +9,26 @@ import { UnitService } from './unit.service';
 })
 export class UnitComponent implements OnInit{
 units:IUnit[] =[];
-constructor(private unitService:UnitService){
+unit:Unit = new Unit();
+constructor(private unitService:UnitService , private notification:ToastrService){
 
 }
   ngOnInit(): void {
-    this.unitService.getAllUnits().subscribe({
-      next:units=>this.units=units
-    })
+    this.getUnits()
   }
+getUnits(){
+  this.unitService.getAllUnits().subscribe({
+    next:units=>this.units=units
+  })
+}
 
+
+createUnit(){
+  this.unitService.createUnit(this.unit).subscribe({
+    next : param=>{this.notification.success("واحد اندازه گیری ایجاد شد")
+    this.getUnits();
+  }
+  });
+}
 
 }

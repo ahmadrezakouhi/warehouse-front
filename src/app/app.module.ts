@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReceiptModule } from './receipt/receipt.module';
 import { UnitModule } from './unit/unit.module';
 import { GroupModule } from './group/group.module';
+import { ToastrModule , ToastNoAnimation , ToastNoAnimationModule } from 'ngx-toastr';
 
 
 
@@ -35,7 +36,8 @@ import { GroupModule } from './group/group.module';
     
     RouterModule.forRoot([
       { path: '**', redirectTo:'login' }
-    ])
+    ]),
+    ToastNoAnimationModule.forRoot()
 
   ],
   providers: [],
