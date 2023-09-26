@@ -11,8 +11,8 @@
 
 
 <div class="flex-grow-1">
-<p class="mb-0 ps-1 text-dark">name last name</p>
-<p class="mt-0 ps-1 text-muted">name last name s</p>
+<!-- <p class="mb-0 ps-1 text-dark">name last name</p>
+<p class="mt-0 ps-1 text-muted">name last name s</p> -->
 </div>
 
 
@@ -45,7 +45,7 @@
 
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x "></i>
-            <i class="fa fa-archive fa-stack-1x " style="color:coral"></i> 
+            <i class="fa fa-cube fa-stack-1x " style="color:coral"></i> 
 
           </span>
 
@@ -53,8 +53,14 @@
           </a>
       </div>
       <div class="d-grid mt-2">
-        <a class="btn rounded p-3 text-white text-start" style="background-color: rgba(255, 99, 71, 0.5);border: 1px solid tomato;">
-          user managment
+        <a class="btn rounded p-3 text-white text-start" [routerLink]="['receipts']" style="background-color: rgba(255, 99, 71, 0.5);border: 1px solid tomato;">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x "></i>
+            <i class="fa fa-file-text-o fa-stack-1x " style="color:coral"></i> 
+
+          </span>
+
+          مدیریت رسید ها
           </a>
       </div>
     </div>

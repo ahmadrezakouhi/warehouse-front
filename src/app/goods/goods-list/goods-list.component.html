@@ -9,22 +9,22 @@
             <table class="table table-striped table-borderless text-center ">
                 <thead>
                   <tr>
-                    <th class="p-3">کد کالا</th>
-                    <th class="p-3">نام کالا</th>
-                    <th class="p-3">گروه کالا</th>
-                    <th class="p-3">واحد</th>
-                    <th class="p-3">مدل</th>
-                    <th class="p-3">توضیحات</th>
+                    <td class="p-3">کد کالا</td>
+                    <td class="p-3">نام کالا</td>
+                    <td class="p-3">گروه کالا</td>
+                    <td class="p-3">واحد</td>
+                    <td class="p-3">مدل</td>
+                    <td class="p-3">توضیحات</td>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="p-3">John</td>
-                    <td class="p-3">Doe</td>
-                    <td class="p-3">john@example.com</td>
-                    <td class="p-3">John</td>
-                    <td class="p-3">John</td>
-                    <td class="p-3">Doe</td>
+                  <tr *ngFor="let g of goods">
+                    <td class="p-3">{{g.goodsCode}}</td>
+                    <td class="p-3">{{g.name}}</td>
+                    <td class="p-3">{{g.group}}</td>
+                    <td class="p-3">{{g.unit}}</td>
+                    <td class="p-3">{{g.model}}</td>
+                    <td class="p-3">{{g.description}}</td>
                   </tr>
                   
                 </tbody>

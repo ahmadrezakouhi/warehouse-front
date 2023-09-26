@@ -9,16 +9,18 @@
             <table class="table table-striped table-borderless text-center ">
                 <thead>
                   <tr>
-                    <th class="p-3">نام</th>
-                    <th class="p-3">شماره</th>
-                    <th class="p-3"> آدرس</th>
+                    <td class="p-3">نام</td>
+                    <td class="p-3">کد انبار</td>
+                    <td class="p-3">شماره</td>
+                    <td class="p-3"> آدرس</td>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="p-3">John</td>
-                    <td class="p-3">Doe</td>
-                    <td class="p-3">john@example.com</td>
+                  <tr *ngFor="let warehouse of warehouses">
+                    <td class="p-3">{{warehouse.name}}</td>
+                    <td class="p-3">{{warehouse.warehouseCode}}</td>
+                    <td class="p-3">{{warehouse.phone}}</td>
+                    <td class="p-3">{{warehouse.address}}</td>
                   </tr>
                  
                 </tbody>
