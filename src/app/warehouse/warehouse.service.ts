@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IWarehouse } from './warehouse';
+import { IWarehouse, Warehouse } from './warehouse';
 import { AppSettings } from '../share/app-settings';
 
 @Injectable({
@@ -13,5 +13,9 @@ export class WarehouseService {
 
   getAllWarehouses():Observable<IWarehouse[]>{
     return this.http.get<IWarehouse[]>(AppSettings.ENDPOINT+'warehouses');
+  }
+
+  createWarehouse(warehouse:Warehouse):Observable<void>{
+    return this.http.post<void>(AppSettings.ENDPOINT+"warehouses",warehouse);
   }
 }

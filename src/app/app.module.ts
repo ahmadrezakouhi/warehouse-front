@@ -11,7 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReceiptModule } from './receipt/receipt.module';
 import { UnitModule } from './unit/unit.module';
 import { GroupModule } from './group/group.module';
-import { ToastrModule , ToastNoAnimation , ToastNoAnimationModule } from 'ngx-toastr';
+import { ToastNoAnimationModule } from 'ngx-toastr';
+import { AuthModule } from './auth/auth.module';
+
 
 
 
@@ -33,6 +35,7 @@ import { ToastrModule , ToastNoAnimation , ToastNoAnimationModule } from 'ngx-to
     ReceiptModule,
     UnitModule,
     GroupModule,
+    AuthModule,
     
     RouterModule.forRoot([
       { path: '**', redirectTo:'login' }

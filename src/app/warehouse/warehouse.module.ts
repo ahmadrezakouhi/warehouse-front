@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { WarehouseListComponent } from './warehouse-list/warehouse-list.component';
 import { WarehouseCreateComponent } from './warehouse-create/warehouse-create.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,6 +15,7 @@ import { WarehouseCreateComponent } from './warehouse-create/warehouse-create.co
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild([
       { path: 'warehouses', component: WarehouseListComponent },
       { path: 'warehouses/create', component: WarehouseCreateComponent }

@@ -8,22 +8,24 @@
         <div class="card-body p-0 py-3">
             
          <div class="container">
-            <form>
+            <!-- <form> -->
                        <div class="row mb-3">
 
                         <div class="col-4">
                             <label for="inputName" class="col-form-label">کد کالا</label>
-                            <input type="text" class="form-control" name="inputName" id="inputName" >
+                            <input type="text" class="form-control" name="inputName" id="inputName" [(ngModel)]="goods.goodsCode" >
                             </div>
 
                         <div class="col-4">
                         <label for="inputName" class="col-form-label"> نام کالا</label>
-                        <input type="text" class="form-control" name="inputName" id="inputName" >
+                        <input type="text" class="form-control" name="inputName" id="inputName" [(ngModel)]="goods.name" >
                         </div>
 
                         <div class="col-4">
                         <label for="inputName" class="col-form-label">گروه کالا</label>
-                        <input type="text" class="form-control" name="inputName" id="inputName" >
+                        <select class="form-select" [(ngModel)]="goods.groupId" >
+                            <option *ngFor="let group of groups" [value]="group.id">{{group.name}}</option>
+                          </select> 
                         </div>
 
                        
@@ -32,22 +34,26 @@
                         <div class="row mb-3">
                             <div class="col-4">
                                 <label for="inputName" class="col-form-label">واحد کالا</label>
-                                <input type="text" class="form-control" name="inputName" id="inputName" >
+                                <select class="form-select" [(ngModel)]="goods.unitId">
+                                    <option *ngFor="let unit of units" [value]="unit.id">{{unit.name}}</option>
+                                  </select> 
                                 </div>
     
                             <div class="col-4">
                             <label for="inputName" class="col-form-label"> مدل</label>
-                            <input type="text" class="form-control" name="inputName" id="inputName" >
+                            <input type="text" class="form-control" name="inputName" id="inputName" [(ngModel)]="goods.model">
                             </div>
     
                             <div class="col-4">
                             <label for="inputName" class="col-form-label">توضیحات</label>
-                            <input type="text" class="form-control" name="inputName" id="inputName" >
+                            <input type="text" class="form-control" name="inputName" id="inputName" [(ngModel)]="goods.description">
                             </div>
                             </div>
-                <input type="button" value="ثبت" class="btn green text-white w-25  " >
+                <div class="d-flex justify-content-end">
+                    <button type="button"  class="btn green text-white w-25  " (click)="createGoods()" >ثبت</button>
+                </div>
                
-            </form>
+            <!-- </form> -->
          </div>
         </div>
     </div>

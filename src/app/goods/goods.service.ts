@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IGoods } from './goods';
+import { Goods, IGoods } from './goods';
 import { AppSettings } from '../share/app-settings';
 
 @Injectable({
@@ -17,5 +17,9 @@ export class GoodsService {
 
   getGoods(goodsCode:number):Observable<IGoods>{
     return this.http.get<IGoods>(AppSettings.ENDPOINT+`goods/${goodsCode}`)
+  }
+
+  createGoods(goods:Goods):Observable<void>{
+    return this.http.post<void>(AppSettings.ENDPOINT+"goods",goods);
   }
 }
